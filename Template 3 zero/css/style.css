@@ -1,0 +1,158 @@
+/*Strat globel rules*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+:root{
+    --main-color:#2196f3;
+    --main-color-alt:#1787e0;
+    --main-transition:0.3s;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Small*/
+@media(min-width:768px)
+{
+    .container
+        {
+            width: 750px;
+        }
+
+}
+/*Medium*/
+@media(min-width:992px)
+{
+    .container
+        {
+            width: 9
+            970px;
+        }
+
+}
+/*large*/
+@media(min-width:1200px)
+{
+    .container{
+        width: 1170px;
+    }
+}
+
+a{
+    text-decoration: none; 
+}
+
+
+/*End globel rules*/
+/*Start hearder*/
+.header{
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position:relative;
+}
+.header .logo{
+    color: #2196f3;
+    font-size: 26px;
+    font-weight: bold;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 767px)
+{
+    .header .logo{
+        width: 100%;
+        height: 40px;
+
+    }
+}
+.header .main-nav{
+display: flex;
+}
+.header .main-nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;   
+    position: relative ;
+    overflow: hidden;
+    color: black;
+    padding: 0 30px;
+    transition: var(--main-transition);
+}
+@media(max-width: 767px)
+{
+    .header .main-nav > li > a {
+        padding: 10px;
+        font-size: 14px;
+        height: 40px;
+        
+
+    }
+}
+
+.header .main-nav > li > a::before{
+    content: "" ;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left:-100%;
+    transition: var(--main-transition);
+    overflow: hidden; 
+
+}
+.header .main-nav > li > a:hover{
+   
+    color: var(--main-color);
+    background-color: #fafafa;
+    overflow: hidden; 
+}
+.header .main-nav > li > a:hover::before{
+    left:0;
+}
+ 
+/*Strat Landing */
+
+.landing{
+position: relative;
+}
+.landing ::before{
+content: "";
+}
+
+.landing.container{
+
+}
+.landing .image img{
+    width: 600px;
+   
+}
+
+/*End Landing */
